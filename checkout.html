@@ -6,13 +6,13 @@
         <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
         <script>
         var options = {
-            "key": "rzp_test_mSWWIxp1IG0QoO", // Enter the Key ID generated from the Dashboard
+            "key": "rzp_live_IgIBOT2LDLKUAL", // Enter the Key ID generated from the Dashboard
             "amount": "500", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
             "currency": "INR",
             "name": "Curelink",
             "description": "Test Transaction",
             "image": "https://s3.ap-south-1.amazonaws.com/assets.ynos.in/startup-logos/YNOS402861.jpg",
-            "order_id": "order_Jtb9wzQUM9dE5q", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            "order_id": "order_JtdGZVsGkHl8jZ", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
             "handler": function (response){
                 alert(response.razorpay_payment_id);
                 alert(response.razorpay_order_id);
