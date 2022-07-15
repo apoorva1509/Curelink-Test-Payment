@@ -28,7 +28,38 @@
             },
             "theme": {
                 "color": "#3399cc"
-            }
+            },
+            config: {
+      display: {
+        blocks: {
+          upi: { //name for HDFC block
+            name: "Pay using UPI Apps",
+            instruments: [
+                {
+                    method: 'upi',
+                }
+            ]
+          },
+          wallet: { //  name for other block
+            name: "Pay using Wallets",
+            instruments: [
+              {
+                method: "wallet",
+              },
+            ]
+          }
+        },
+        hide: [
+          {
+          method: "upi"
+          }
+        ],
+        sequence: ["block.upi", "block.wallet"],
+        preferences: {
+          show_default_blocks: false // Should Checkout show its default blocks?
+        }
+      }
+    },
         };
         var rzp1 = new Razorpay(options);
         rzp1.on('payment.failed', function (response){
